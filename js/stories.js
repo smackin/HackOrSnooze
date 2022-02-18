@@ -54,21 +54,20 @@ function putStoriesOnPage() {
 $storyForm.submit(function(event) {
   event.preventDefault();
 
-
   const title = document.getElementById('story-title').value
   const url = document.getElementById('story-url').value
   const author = document.getElementById('story-author').value
-  const username = currentUser.username
-  const storyData = {title, url, author, username};
+  //const username = currentUser.username
+  const storyData = {title, url, author};
 
   console.log(storyData)
-  let newStory = await storyList.addStory(currentUser,storyData)
+  let newStory = storyList.addStory(currentUser,storyData)
   console.log(newStory)
 
   /*
     TODO: Stephanie you'll have to 
-    1) Read the 3 inputs from the story-form
-      a) title
+    xx 1) Read the 3 inputs from the story-form
+      a) title 
       b) author
       c) url
     2) Call the addStoryList and pass in form inputs
