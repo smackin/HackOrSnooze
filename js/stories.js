@@ -51,7 +51,7 @@ function putStoriesOnPage() {
   $allStoriesList.show();
 }
 
-$storyForm.submit(function(event) {
+$storyForm.submit( async function(event) {
   event.preventDefault();
 
   const title = document.getElementById('story-title').value
@@ -61,7 +61,7 @@ $storyForm.submit(function(event) {
   const storyData = {title, url, author};
 
   console.log(storyData)
-  let newStory = storyList.addStory(currentUser,storyData)
+  let newStory = await storyList.addStory(currentUser,storyData)
   console.log(newStory)
 
   /*
