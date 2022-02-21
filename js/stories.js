@@ -51,7 +51,7 @@ function putStoriesOnPage() {
   $allStoriesList.show();
 }
 
-$storyForm.submit( async function(event) {
+$storyForm.submit(async function(event) {
   event.preventDefault();
 
   const title = document.getElementById('story-title').value
