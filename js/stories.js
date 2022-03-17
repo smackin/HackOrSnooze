@@ -64,6 +64,8 @@ $storyForm.submit(async function(event) {
   let newStory = await storyList.addStory(currentUser,storyData)
   console.log(newStory)
 
+  console.log(event);
+
   /*
     TODO: Stephanie you'll have to 
     xx 1) Read the 3 inputs from the story-form
@@ -74,6 +76,5 @@ $storyForm.submit(async function(event) {
       e.g.
         let newStory = await storyList.addStory(currentUser,storyData)
   */
-
-  console.log(event);
+  
 });
